@@ -11,4 +11,4 @@ class MovieQuotes extends Component{
         );
     }
 }
-export default auth(MovieQuotes);
+export default auth(MovieQuotes, '/sign-up');
