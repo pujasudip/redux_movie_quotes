@@ -18,6 +18,7 @@ const App = () => (
             <Route path='/movie-quotes' component={MovieQuotes}/>
             <Route path='/sign-up' component={SignUp}/>
         </div>
+        <MovieQuotes quote='this is a quote'/>
     </div>
 );
 

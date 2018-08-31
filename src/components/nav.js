@@ -25,8 +25,8 @@ class Nav extends Component{
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/about'>About</Link></li>
                             <li><Link to='/secret-list'>Secret List</Link></li>
-                            <li><Link to='/movie-quote'>Movie Quote</Link></li>
-                            <li><Link to='/sing-up'>Sign Up</Link></li>
+                            <li><Link to='/movie-quotes'>Movie Quote</Link></li>
+                            <li><Link to='/sign-up'>Sign Up</Link></li>
                             <li>
                                 {this.renderAuthButtons()}
                             </li>
