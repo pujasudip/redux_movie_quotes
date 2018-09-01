@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import '../assets/css/auth.css';
 
-export default function (WrappedComponent, path='/', message) {
-    class Auth extends Component {
+
+export default (WrappedComponent, to = '/')=> {
+    class Redirect extends Component {
+
         componentDidMount(){
-            this.checkAuth();
+            this.redirect();
         }
 
         componentDidUpdate(){
-            this.checkAuth();
+            this.redirect();
         }
 
-        checkAuth(){
+        redirect(){
             const { auth, history } = this.props;
 
-            if(!auth){
-                console.log('auth:' + message);
-                history.push(path);
+            if(auth){
+                history.push(to);
             }
         }
 
@@ -32,5 +32,6 @@ export default function (WrappedComponent, path='/', message) {
         }
     }
 
-    return connect(mapStateToProps)(Auth)
+    return connect(mapStateToProps)(Redirect)
 }
+
